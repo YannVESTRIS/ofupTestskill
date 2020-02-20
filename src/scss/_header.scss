@@ -1,0 +1,27 @@
+header {
+	ul {
+		height: 70px;
+		li {
+			display: inline-block;
+
+			a {
+			}
+		}
+
+		li#logo {
+			a {
+				img {
+					width: 30%;
+				}
+			}
+		}
+	}
+
+	p#banner {
+		height: 300px;
+	}
+
+	p#promo {
+		height: 100px;
+	}
+}

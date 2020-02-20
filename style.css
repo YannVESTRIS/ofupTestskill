@@ -1,0 +1,51 @@
+a,
+h1,
+h2,
+h3,
+li,
+p {
+  font-family: "aileron"; }
+
+@font-face {
+  font-family: "aileron";
+  src: url("./assets/fonts/Aileron-Light.eot");
+  src: url("./assets/fonts/Aileron-Light.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/Aileron-Light.otf") format("opentype"), url("./assets/fonts/Aileron-Light.woff") format("woff"), url("./assets/fonts/Aileron-Light.woff2") format("woff2"), url("./assets/fonts/Aileron-Light.ttf") format("truetype"); }
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+a {
+  text-decoration: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+ul {
+  list-style-type: none; }
+
+header ul {
+  height: 70px; }
+  header ul li {
+    display: inline-block; }
+  header ul li#logo a img {
+    width: 30%; }
+
+header p#banner {
+  height: 300px; }
+
+header p#promo {
+  height: 100px; }

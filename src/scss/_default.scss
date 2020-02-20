@@ -1,0 +1,43 @@
+html {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a,
+h1,
+h2,
+h3,
+li,
+p {
+	@extend %aileron;
+}
+
+a {
+	// color: #ffffff;
+}
