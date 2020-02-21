@@ -1,3 +1,5 @@
+@use "helpers/mixins" as mix;
+
 html {
 	box-sizing: border-box;
 }
@@ -18,6 +20,7 @@ input::-ms-clear {
 
 a {
 	text-decoration: none;
+	color: inherit;
 }
 
 img {
@@ -42,3 +45,7 @@ p {
 a {
 	// color: #ffffff;
 }
+
+@include mix.fonts("aileron", mix.$fontURL, "Aileron-Light");
+@include mix.fonts("aileronB", mix.$fontURL, "Aileron-Bold");
+@include mix.fonts("aileronH", mix.$fontURL, "Aileron-Heavy");

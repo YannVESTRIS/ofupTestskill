@@ -1,0 +1,42 @@
+@use "helpers/mixins" as mix;
+
+header {
+	p#banner {
+		@extend %aileronB;
+		height: 400px;
+		background: {
+			image: linear-gradient(rgba(0, 0, 0, 0.7)),
+				url("./assets/images/magazines-min.jpg");
+			repeat: no-repeat;
+			size: 100%;
+			// position: ;
+		}
+		text-align: center;
+
+		label {
+			@extend %aileronH;
+			color: white;
+			position: relative;
+			top: 40%;
+			font-size: 1.5em;
+
+			span {
+				color: #f8a306;
+			}
+		}
+
+		input {
+			margin-top: 10px;
+			background: {
+				image: url("./assets/images/magnifier.png");
+				repeat: no-repeat;
+				size: 6%;
+				position: 98% 50%;
+			}
+			border: 0;
+			padding: 8px 10px;
+			width: 20%;
+			font-style: italic;
+		}
+	}
+}

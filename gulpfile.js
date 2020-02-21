@@ -6,6 +6,8 @@ const notify = require("gulp-notify");
 const connect = require("gulp-connect-php");
 const browserSync = require("browser-sync").create();
 
+sass.compiler = require("sass");
+
 gulp.task("sass", done => {
 	gulp
 		.src("src/scss/**/*.scss")

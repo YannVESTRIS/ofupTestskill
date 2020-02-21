@@ -1,0 +1,62 @@
+@use "helpers/mixins" as mix;
+
+main {
+	nav {
+		width: 95%;
+		margin: 0 auto;
+		// text-align: center;
+		ul {
+			// background-color: lightblue;
+			// text-align: left;
+			// margin-left: 2%;
+			margin-bottom: 10px;
+
+			li {
+				width: 200px;
+				display: inline-table;
+				margin-bottom: 10px;
+
+				h3 {
+					@extend %aileronB;
+					color: #3445a8;
+					font-size: 1em;
+					text-transform: capitalize;
+
+					// &::after {
+					// 	@include mix.square(7px, orange);
+					// 	top: 500px;
+					// }
+				}
+
+				p {
+					// text-indent: 3%;
+					padding-left: 5%;
+
+					a {
+						font-size: 0.8em;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	div.mags {
+		ul {
+			background-color: lightblue;
+
+			li {
+				display: inline-table;
+				width: 30%;
+				margin-bottom: 15px;
+
+				img {
+					// width: 100%;
+				}
+			}
+		}
+	}
+}
