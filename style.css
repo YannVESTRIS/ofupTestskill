@@ -8,7 +8,7 @@ p {
   font-family: "aileron";
 }
 
-main nav ul li h3, header p#banner {
+main section nav ul li h3, header p#banner {
   font-family: "aileronB";
 }
 
@@ -67,8 +67,8 @@ ul {
 }
 header p#banner {
   height: 400px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7))), url("./assets/images/magazines-min.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7)), url("./assets/images/magazines-min.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7))), url("./assets/images/french_magazine-min.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7)), url("./assets/images/french_magazine-min.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   text-align: center;
@@ -94,36 +94,37 @@ header p#banner input {
   font-style: italic;
 }
 
-main nav {
+main section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+main section nav {
   width: 95%;
   margin: 0 auto;
 }
-main nav ul {
-  margin-bottom: 10px;
-}
-main nav ul li {
+main section nav ul li {
   width: 200px;
   display: inline-table;
   margin-bottom: 10px;
 }
-main nav ul li h3 {
+main section nav ul li h3 {
   color: #3445a8;
   font-size: 1em;
   text-transform: capitalize;
 }
-main nav ul li p {
+main section nav ul li p {
   padding-left: 5%;
 }
-main nav ul li p a {
+main section nav ul li p a {
   font-size: 0.8em;
 }
-main nav ul li p a:hover {
+main section nav ul li p a:hover {
   text-decoration: underline;
 }
-main div.mags ul {
+main section div.mags ul {
   background-color: lightblue;
 }
-main div.mags ul li {
+main section div.mags ul li {
   display: inline-table;
   width: 30%;
   margin-bottom: 15px;

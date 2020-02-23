@@ -10,13 +10,13 @@
 
 <body>
 	<header>
-		<?= include("inc/header.inc.html") ?>
+		<?php include "inc/header.inc.html"; ?>
 	</header>
 	<main>
-		<?= include("inc/main.inc.html") ?>
+		<?php include "inc/main.inc.php"; ?>
 	</main>
 	<footer>
-		<?= include("inc/footer.inc.html") ?>
+		<?php include "inc/footer.inc.html"; ?>
 	</footer>
 </body>
 

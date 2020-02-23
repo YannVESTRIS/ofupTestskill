@@ -27,11 +27,12 @@ const reload = done => {
 gulp.task("browser-sync", done => {
 	connect.server({}, () => {
 		browserSync.init({
-			proxy: "http://localhost/ofup2020",
+			proxy: "http://ofupTestskill",
 			open: false
 		});
 	});
-	gulp.watch("**/*.php", reload);
+	gulp.watch("*.php", reload);
+	gulp.watch("/**/*.php", reload);
 	gulp.watch("inc/**/*.html", reload);
 	gulp.watch("src/scss/**/*.scss", reload);
 	done();

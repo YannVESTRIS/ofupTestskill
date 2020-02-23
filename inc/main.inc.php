@@ -1,3 +1,4 @@
+<?php require_once "model/helper.php"; ?>
 <section>
 	<nav>
 		<ul>
@@ -116,79 +117,14 @@
 			</li>
 		</ul>
 	</nav>
-
+</section>
+<section>
 	<div class="mags">
 		<ul>
-			<li>
-				<img
-					src="./assets/images/mags_thumbnails/middle_00147.jpg"
-					alt=""
-				/>
-				<p>
-					ajouter au panier
-				</p>
-				<p>en savoir plus</p>
-			</li>
-			<li>
-				<img
-					src="./assets/images/mags_thumbnails/middle_00147.jpg"
-					alt=""
-				/>
-			</li>
-			<li>
-				<img
-					src="./assets/images/mags_thumbnails/middle_00147.jpg"
-					alt=""
-				/>
-			</li>
-			<li>
-				<img
-					src="./assets/images/mags_thumbnails/middle_05525.jpg"
-					alt=""
-				/>
-			</li>
-			<li>
-				<img
-					src="./assets/images/mags_thumbnails/middle_02679.jpg"
-					alt=""
-				/>
-			</li>
-			<li>
-				<img
-					src="./assets/images/mags_thumbnails/middle_02578.jpg"
-					alt=""
-				/>
-			</li>
-			<li>
-				<img
-					src="./assets/images/mags_thumbnails/middle_02533.jpg"
-					alt=""
-				/>
-			</li>
-			<li>
-				<img
-					src="./assets/images/mags_thumbnails/middle_02405.jpg"
-					alt=""
-				/>
-			</li>
-			<li>
-				<img
-					src="./assets/images/mags_thumbnails/middle_01842.jpg"
-					alt=""
-				/>
-			</li>
-			<li>
-				<img
-					src="./assets/images/mags_thumbnails/middle_01722.jpg"
-					alt=""
-				/>
-			</li>
-			<li>
-				<img
-					src="./assets/images/mags_thumbnails/middle_01648.jpg"
-					alt=""
-				/>
-			</li>
+		<?php
+  $LIs = new Helper();
+  $LIs->thumbnail();
+  ?>
 		</ul>
 	</div>
 </section>

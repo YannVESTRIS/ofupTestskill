@@ -1,21 +1,27 @@
 {
-  "name": "ofup2020",
-  "version": "1.0.0",
-  "description": "OFUP2020",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-connect-php": "^1.0.3",
-    "gulp-notify": "^3.2.0",
-    "gulp-sass": "^4.0.2",
-    "sass": "^1.25.0"
-  }
+	"name": "ofup2020",
+	"version": "1.0.0",
+	"description": "OFUP2020",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@prettier/plugin-php": "^0.13.0",
+		"browser-sync": "^2.26.7",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-concat": "^2.6.1",
+		"gulp-connect-php": "^1.0.3",
+		"gulp-notify": "^3.2.0",
+		"gulp-sass": "^4.0.2",
+		"prettier": "^1.19.1",
+		"sass": "^1.25.0"
+	},
+	"prettier": {
+		"useTabs": true,
+		"tabWidth": 3
+	}
 }
