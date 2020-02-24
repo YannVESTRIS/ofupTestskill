@@ -12,7 +12,7 @@ main section nav ul li h3, header p#banner {
   font-family: "aileronB";
 }
 
-header p#banner label {
+main section.mags div ul li p:last-child a, header p#banner label {
   font-family: "aileronH";
 }
 
@@ -121,11 +121,63 @@ main section nav ul li p a {
 main section nav ul li p a:hover {
   text-decoration: underline;
 }
-main section div.mags ul {
-  background-color: lightblue;
+main section.mags {
+  background-color: #222329;
 }
-main section div.mags ul li {
+main section.mags div {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 90%;
+}
+main section.mags div ul li {
   display: inline-table;
-  width: 30%;
-  margin-bottom: 15px;
+  height: 400px;
+  margin-bottom: 70px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 25px;
+  background-color: white;
+}
+main section.mags div ul li:hover img {
+  -webkit-filter: brightness(20%);
+          filter: brightness(20%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+main section.mags div ul li:hover::after {
+  content: "";
+  position: relative;
+  top: -240px;
+  left: 95px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-image: url("./assets/images/cart.png");
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+main section.mags div ul li img {
+  vertical-align: top;
+  height: 318px;
+  width: 247px;
+}
+main section.mags div ul li p.add a {
+  background-color: #f9b501;
+}
+main section.mags div ul li p:last-child {
+  position: relative;
+  top: 55px;
+}
+main section.mags div ul li p:last-child a {
+  display: block;
+  width: 90px;
+  padding: 10px;
+  background-color: #222329;
+  font-size: 0.7em;
+  color: #f9b501;
+}
+main section.mags div ul li p:last-child a:hover {
+  background-color: #f9b501;
+  color: #222329;
 }

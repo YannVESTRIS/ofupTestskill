@@ -19,10 +19,11 @@ class Helper
 			$li = "<li>";
 			$li .= "<img";
 			$li .= " src='./assets/images/mags_thumbnails/" . $value . ".jpg'";
+			// $li .= " height='318' width='247'";
 			$li .= " alt=''";
 			$li .= " />";
-			$li .= "<p>ajouter au panier</p>";
-			$li .= "<p>en savoir plus</p>";
+			// $li .= "<p class='add'><a>Ajouter</a></p>";
+			$li .= "<p><a href='#!'>En savoir plus</a></p>";
 			$li .= "</li>";
 			echo $li;
 		}

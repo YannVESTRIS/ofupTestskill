@@ -27,7 +27,7 @@ const reload = done => {
 gulp.task("browser-sync", done => {
 	connect.server({}, () => {
 		browserSync.init({
-			proxy: "http://ofupTestskill",
+			proxy: "http://localhost/ofup2020",
 			open: false
 		});
 	});

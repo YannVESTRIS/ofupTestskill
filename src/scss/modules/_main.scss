@@ -61,18 +61,85 @@ main {
 			}
 		}
 	}
-	section {
-		div.mags {
-			ul {
-				background-color: lightblue;
+	section.mags {
+		background-color: #222329;
+		// text-align: center;
 
+		div {
+			@include mix.spacing(margin, LR, auto);
+			margin-top: 50px;
+			width: 90%;
+
+			ul {
 				li {
 					display: inline-table;
-					width: 30%;
-					margin-bottom: 15px;
+					height: 400px;
+					margin-bottom: 70px;
+					@include mix.spacing(margin, LR, 20px);
+					padding: 25px;
+					background-color: white;
+
+					&:hover {
+						img {
+							filter: brightness(20%);
+							transition: all 0.3s ease;
+						}
+					}
+
+					&:hover::after {
+						content: "";
+						position: relative;
+						top: -240px;
+						left: 95px;
+						display: block;
+						width: 100px;
+						height: 100px;
+						background: {
+							image: url("./assets/images/cart.png");
+							repeat: no-repeat;
+							size: 60%;
+						}
+					}
+
+					// &:hover::before {
+					// 	content: "trucMuch";
+					// 	position: absolute;
+					// }
 
 					img {
-						// width: 100%;
+						// width: 95%;
+						vertical-align: top;
+						height: 318px;
+						width: 247px;
+					}
+
+					p.add {
+						// position: relative;
+						// top: 100%;
+
+						a {
+							background-color: mix.$orange;
+						}
+					}
+
+					p:last-child {
+						position: relative;
+						top: 55px;
+
+						a {
+							@extend %aileronH;
+							display: block;
+							width: 90px;
+							padding: 10px;
+							background-color: #222329;
+							font-size: 0.7em;
+							color: mix.$orange;
+
+							&:hover {
+								background-color: mix.$orange;
+								color: #222329;
+							}
+						}
 					}
 				}
 			}

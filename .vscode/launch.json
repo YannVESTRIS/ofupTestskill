@@ -8,9 +8,13 @@
 			"type": "node",
 			"request": "launch",
 			"name": "Gulp watch",
-			"program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
-			"args": ["watch"],
-			"skipFiles": ["<node_internals>/**"]
+			"program": "E:/Users/yann.vestris/AppData/Roaming/npm/node_modules/gulp/bin/gulp.js",
+			"args": [
+				"watch"
+			],
+			"skipFiles": [
+				"<node_internals>/**"
+			]
 		}
 	]
 }

@@ -118,13 +118,13 @@
 		</ul>
 	</nav>
 </section>
-<section>
-	<div class="mags">
+<section class="mags">
+	<div>
 		<ul>
-		<?php
-  $LIs = new Helper();
-  $LIs->thumbnail();
-  ?>
+			<?php
+			$LIs = new Helper();
+			$LIs->thumbnail();
+			?>
 		</ul>
 	</div>
 </section>
