@@ -1,12 +1,11 @@
 const gulp = require("gulp");
+const browserSync = require("browser-sync").create();
 const sass = require("gulp-sass");
+sass.compiler = require("sass");
 const concat = require("gulp-concat");
 const prefix = require("gulp-autoprefixer");
 const notify = require("gulp-notify");
 const connect = require("gulp-connect-php");
-const browserSync = require("browser-sync").create();
-
-sass.compiler = require("sass");
 
 gulp.task("sass", done => {
 	gulp
@@ -15,14 +14,10 @@ gulp.task("sass", done => {
 		.pipe(prefix("last 2 versions"))
 		.pipe(concat("style.css"))
 		.pipe(gulp.dest("./"))
+		.pipe(browserSync.stream())
 		.pipe(notify("SCSS compiled !"));
 	done();
 });
-
-const reload = done => {
-	browserSync.reload();
-	done();
-};
 
 gulp.task("browser-sync", done => {
 	connect.server({}, () => {
@@ -31,17 +26,12 @@ gulp.task("browser-sync", done => {
 			open: false
 		});
 	});
-	gulp.watch("*.php", reload);
-	gulp.watch("/**/*.php", reload);
-	gulp.watch("inc/**/*.html", reload);
-	gulp.watch("src/scss/**/*.scss", reload);
+	gulp.watch("src/scss/**/*.scss", gulp.series("sass"));
+	gulp.watch("*.php").on("change", browserSync.reload);
+	gulp.watch("**/*.php").on("change", browserSync.reload);
+	gulp.watch("inc/**/*.html").on("change", browserSync.reload);
+	gulp.watch("src/scss/**/*.scss").on("change", browserSync.reload);
 	done();
 });
 
-gulp.task(
-	"watch",
-	gulp.series("sass", "browser-sync", done => {
-		gulp.watch("src/scss/**/*.scss", gulp.series("sass"));
-		done();
-	})
-);
+gulp.task("watch", gulp.series("sass", "browser-sync"));
