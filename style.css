@@ -8,11 +8,11 @@ p {
   font-family: "aileron";
 }
 
-main section nav ul li h3, header p#banner {
+main section:nth-child(1) nav ul li h3, header section#banner {
   font-family: "aileronB";
 }
 
-main section.mags div ul li p:last-child a, header p#banner label {
+main section.mags div ul li p:last-child a, header section#banner label {
   font-family: "aileronH";
 }
 
@@ -65,7 +65,30 @@ ul {
   src: url("./assets/fonts/Aileron-Heavy.eot");
   src: url("./assets/fonts/Aileron-Heavy.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/Aileron-Heavy.otf") format("opentype"), url("./assets/fonts/Aileron-Heavy.woff") format("woff"), url("./assets/fonts/Aileron-Heavy.woff2") format("woff2"), url("./assets/fonts/Aileron-Heavy.ttf") format("truetype");
 }
-header p#banner {
+header section#logo {
+  height: 100px;
+}
+header section#logo a:first-child {
+  float: left;
+  position: relative;
+  top: 13%;
+  left: 5%;
+}
+header section#logo a:first-child img {
+  width: 60%;
+}
+header section#logo a:nth-child(2),
+header section#logo a:last-child {
+  float: right;
+  position: relative;
+  top: 13%;
+  right: 5%;
+}
+header section#logo a:nth-child(2) img,
+header section#logo a:last-child img {
+  width: 90%;
+}
+header section#banner {
   height: 400px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7))), url("./assets/images/french_magazine-min.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.7)), url("./assets/images/french_magazine-min.jpg");
@@ -73,16 +96,16 @@ header p#banner {
   background-size: 100%;
   text-align: center;
 }
-header p#banner label {
+header section#banner label {
   color: white;
   position: relative;
   top: 40%;
   font-size: 1.5em;
 }
-header p#banner label span {
+header section#banner label span {
   color: #f8a306;
 }
-header p#banner input {
+header section#banner input {
   margin-top: 10px;
   background-image: url("./assets/images/magnifier.png");
   background-repeat: no-repeat;
@@ -93,32 +116,53 @@ header p#banner input {
   width: 20%;
   font-style: italic;
 }
+header section#banner input:hover {
+  background-color: #053a7d;
+  color: white;
+}
+header section#banner input:hover::-webkit-input-placeholder {
+  color: white;
+}
+header section#banner input:hover::-moz-placeholder {
+  color: white;
+}
+header section#banner input:hover:-ms-input-placeholder {
+  color: white;
+}
+header section#banner input:hover::-ms-input-placeholder {
+  color: white;
+}
+header section#banner input:hover::placeholder {
+  color: white;
+}
 
-main section {
+main section:nth-child(1) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7c428), color-stop(3%, #f7c428), color-stop(3%, white), color-stop(97%, white), color-stop(97%, #f7c428), to(#f7c428));
+  background-image: linear-gradient(180deg, #f7c428 0%, #f7c428 3%, white 3%, white 97%, #f7c428 97%, #f7c428 100%);
   padding-top: 10px;
   padding-bottom: 10px;
 }
-main section nav {
-  width: 95%;
+main section:nth-child(1) nav {
+  width: 90%;
   margin: 0 auto;
 }
-main section nav ul li {
-  width: 200px;
+main section:nth-child(1) nav ul li {
   display: inline-table;
   margin-bottom: 10px;
+  padding: 30px;
 }
-main section nav ul li h3 {
+main section:nth-child(1) nav ul li h3 {
   color: #3445a8;
   font-size: 1em;
   text-transform: capitalize;
 }
-main section nav ul li p {
+main section:nth-child(1) nav ul li p {
   padding-left: 5%;
 }
-main section nav ul li p a {
+main section:nth-child(1) nav ul li p a {
   font-size: 0.8em;
 }
-main section nav ul li p a:hover {
+main section:nth-child(1) nav ul li p a:hover {
   text-decoration: underline;
 }
 main section.mags {
@@ -127,47 +171,64 @@ main section.mags {
 main section.mags div {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
   width: 90%;
+}
+main section.mags div h1 {
+  color: #f9b501;
+  font-size: 3em;
+  font-weight: normal;
+  padding-top: 30px;
+}
+main section.mags div h1 span {
+  font-size: 0.5em;
+}
+main section.mags div ul {
+  padding-top: 50px;
 }
 main section.mags div ul li {
   display: inline-table;
-  height: 400px;
+  height: 480px;
   margin-bottom: 70px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
   padding: 25px;
   background-color: white;
 }
+main section.mags div ul li:hover {
+  cursor: pointer;
+}
 main section.mags div ul li:hover img {
-  -webkit-filter: brightness(20%);
-          filter: brightness(20%);
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 main section.mags div ul li:hover::after {
-  content: "";
+  content: url("./assets/images/cart_RESIZE.png");
   position: relative;
-  top: -240px;
+  top: -340px;
   left: 95px;
-  display: block;
-  width: 100px;
-  height: 100px;
-  background-image: url("./assets/images/cart.png");
-  background-repeat: no-repeat;
-  background-size: 60%;
 }
 main section.mags div ul li img {
   vertical-align: top;
   height: 318px;
   width: 247px;
 }
-main section.mags div ul li p.add a {
-  background-color: #f9b501;
+main section.mags div ul li h2 {
+  padding-top: 10px;
+  font-style: italic;
+  font-size: 1.2em;
+}
+main section.mags div ul li p.summary {
+  font-size: 0.8em;
+  word-break: break-all;
+  width: 130px;
+  margin-top: 30px;
+  color: #6b6b6b;
 }
 main section.mags div ul li p:last-child {
   position: relative;
-  top: 55px;
+  top: 25px;
 }
 main section.mags div ul li p:last-child a {
   display: block;
@@ -180,4 +241,51 @@ main section.mags div ul li p:last-child a {
 main section.mags div ul li p:last-child a:hover {
   background-color: #f9b501;
   color: #222329;
+}
+
+footer {
+  background-color: #b8b8b8;
+  padding-top: 50px;
+}
+footer ul {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+footer ul li {
+  display: inline-table;
+  margin-right: 30px;
+  height: 300px;
+  width: 250px;
+}
+footer ul li h3 {
+  color: #053a7d;
+  padding-bottom: 20px;
+}
+footer ul li a {
+  font-size: 0.8em;
+}
+footer ul li a:hover {
+  text-decoration: underline;
+}
+footer ul li:first-child {
+  margin: inherit;
+  width: 500px;
+}
+footer ul li input,
+footer ul li button {
+  padding: 10px;
+  border: 0;
+}
+footer ul li input {
+  width: 60%;
+  margin-bottom: 3px;
+}
+footer > p {
+  text-align: center;
+  font-size: 0.8em;
+  width: 100%;
+  background-color: white;
+  height: 50px;
+  padding-top: 20px;
 }

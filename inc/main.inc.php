@@ -120,6 +120,7 @@
 </section>
 <section class="mags">
 	<div>
+		<h1>Notre sélection <span>de magazines</span></h1>
 		<ul>
 			<?php
 			$LIs = new Helper();

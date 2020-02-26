@@ -34,4 +34,4 @@ gulp.task("browser-sync", done => {
 	done();
 });
 
-gulp.task("watch", gulp.series("sass", "browser-sync"));
+gulp.task("serve", gulp.series("sass", "browser-sync"));

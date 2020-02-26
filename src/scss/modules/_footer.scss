@@ -1,0 +1,59 @@
+@use "helpers/mixins" as mix;
+
+footer {
+	background-color: #b8b8b8;
+	padding-top: 50px;
+
+	ul {
+		width: 90%;
+		@include mix.spacing(margin, LR, auto);
+
+		li {
+			display: inline-table;
+			// @include mix.spacing(padding, LR, 5%);
+			margin-right: 30px;
+			height: 300px;
+			width: 250px;
+
+			h3 {
+				color: mix.$blueD;
+				padding-bottom: 20px;
+			}
+
+			a {
+				font-size: 0.8em;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			&:first-child {
+				margin: inherit;
+				width: 500px;
+			}
+
+			input,
+			button {
+				padding: 10px;
+				border: 0;
+			}
+
+			input {
+				width: 60%;
+				margin-bottom: 3px;
+			}
+
+			a {
+			}
+		}
+	}
+	& > p {
+		text-align: center;
+		font-size: 0.8em;
+		width: 100%;
+		background-color: white;
+		height: 50px;
+		padding-top: 20px;
+	}
+}

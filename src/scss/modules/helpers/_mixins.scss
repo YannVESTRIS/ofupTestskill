@@ -40,3 +40,7 @@
 	height: #{$size};
 	background-color: #{$color};
 }
+
+@mixin aileronB($isImportant: null) {
+	font-family: "aileronB" #{$isImportant};
+}

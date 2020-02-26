@@ -2,27 +2,27 @@
 class Helper
 {
 	private $arrThumbnails = array(
-		"middle_00147",
-		"middle_05525",
-		"middle_02679",
-		"middle_02578",
-		"middle_02533",
-		"middle_02405",
-		"middle_01842",
-		"middle_01722",
-		"middle_01648"
+		"Le Monde" => "middle_00147",
+		"Connaissance des arts" => "middle_05525",
+		"Télé 7 jours" => "middle_02679",
+		"Science & Vie" => "middle_02578",
+		"Paris Match" => "middle_02533",
+		"Le Point" => "middle_02405",
+		"L'Histoire" => "middle_01842",
+		"L'Express" => "middle_01722",
+		"Elle" => "middle_01648"
 	);
 
 	public function thumbnail()
 	{
-		foreach ($this->arrThumbnails as $value) {
+		foreach ($this->arrThumbnails as $key => $value) {
 			$li = "<li>";
 			$li .= "<img";
 			$li .= " src='./assets/images/mags_thumbnails/" . $value . ".jpg'";
-			// $li .= " height='318' width='247'";
 			$li .= " alt=''";
 			$li .= " />";
-			// $li .= "<p class='add'><a>Ajouter</a></p>";
+			$li .= "<h2>" . $key . "</h2>";
+			$li .= "<p class='summary'>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>";
 			$li .= "<p><a href='#!'>En savoir plus</a></p>";
 			$li .= "</li>";
 			echo $li;
