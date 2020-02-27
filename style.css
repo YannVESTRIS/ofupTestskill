@@ -218,6 +218,7 @@ main section.mags div ul li h2 {
   padding-top: 10px;
   font-style: italic;
   font-size: 1.2em;
+  color: red;
 }
 main section.mags div ul li p.summary {
   font-size: 0.8em;
@@ -281,11 +282,28 @@ footer ul li input {
   width: 60%;
   margin-bottom: 3px;
 }
+footer ul li button {
+  background-color: #a3a3a3;
+}
+footer ul li button:hover {
+  background-color: #222329;
+  color: #f9b501;
+}
+footer ul li.social a img {
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: 0.6;
+}
+footer ul:last-child li {
+  height: 150px;
+}
 footer > p {
   text-align: center;
   font-size: 0.8em;
   width: 100%;
   background-color: white;
   height: 50px;
-  padding-top: 20px;
+  padding-top: 25px;
 }

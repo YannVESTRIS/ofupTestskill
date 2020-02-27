@@ -44,16 +44,41 @@ footer {
 				margin-bottom: 3px;
 			}
 
+			button {
+				background-color: #a3a3a3;
+				&:hover {
+					background-color: #222329;
+					color: mix.$orange;
+				}
+			}
+
 			a {
 			}
 		}
+
+		li.social {
+			a {
+				img {
+					@include mix.spacing(padding, LR, 10px);
+					filter: grayscale(100%);
+					opacity: 0.6;
+				}
+			}
+		}
 	}
+
+	ul:last-child {
+		li {
+			height: 150px;
+		}
+	}
+
 	& > p {
 		text-align: center;
 		font-size: 0.8em;
 		width: 100%;
 		background-color: white;
 		height: 50px;
-		padding-top: 20px;
+		padding-top: 25px;
 	}
 }
